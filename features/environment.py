@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 import pathlib
+import tempfile
+import os
 from datetime import datetime
 from utils.logger import logger, log_session_start, log_session_end
 
@@ -14,17 +16,53 @@ def before_all(context):
     log_session_start()
     logger.info("=== INICIANDO SUITE BDD TALENTOLAB ===")
     
-    # Configurar Chrome para BDD
+    # Configurar Chrome para BDD con opciones específicas para CI/CD
     chrome_options = Options()
+    
+    # Opciones básicas para CI/CD
+    chrome_options.add_argument("--headless")  # Ejecutar sin interfaz gráfica
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--disable-plugins")
+    chrome_options.add_argument("--disable-images")
+    chrome_options.add_argument("--disable-javascript")
+    chrome_options.add_argument("--disable-css")
+    
+    # Directorio de datos único para evitar conflictos
+    temp_dir = tempfile.mkdtemp()
+    chrome_options.add_argument(f"--user-data-dir={temp_dir}")
+    
+    # Configuración de ventana
+    chrome_options.add_argument("--window-size=1920,1080")
     chrome_options.add_argument("--start-maximized")
     
-    service = Service()
-    context.driver = webdriver.Chrome(service=service, options=chrome_options)
-    context.driver.implicitly_wait(10)
+    # Opciones adicionales para estabilidad en CI
+    chrome_options.add_argument("--disable-background-timer-throttling")
+    chrome_options.add_argument("--disable-backgrounding-occluded-windows")
+    chrome_options.add_argument("--disable-renderer-backgrounding")
+    chrome_options.add_argument("--disable-features=TranslateUI")
+    chrome_options.add_argument("--disable-ipc-flooding-protection")
     
-    logger.info("WebDriver configurado para BDD")
+    # Configurar service
+    service = Service()
+    
+    try:
+        context.driver = webdriver.Chrome(service=service, options=chrome_options)
+        context.driver.implicitly_wait(10)
+        context.temp_dir = temp_dir  # Guardar para limpieza posterior
+        
+        logger.info("WebDriver configurado para BDD")
+        logger.info(f"Directorio temporal: {temp_dir}")
+        
+    except Exception as e:
+        logger.error(f"Error al configurar WebDriver: {e}")
+        # Limpiar directorio temporal si falla
+        import shutil
+        if os.path.exists(temp_dir):
+            shutil.rmtree(temp_dir, ignore_errors=True)
+        raise
 
 def before_feature(context, feature):
     """Se ejecuta antes de cada feature"""
@@ -96,8 +134,20 @@ def after_feature(context, feature):
 def after_all(context):
     """Se ejecuta una vez después de todas las features"""
     if hasattr(context, 'driver'):
-        context.driver.quit()
-        logger.info("WebDriver cerrado")
+        try:
+            context.driver.quit()
+            logger.info("WebDriver cerrado")
+        except Exception as e:
+            logger.error(f"Error al cerrar WebDriver: {e}")
+    
+    # Limpiar directorio temporal
+    if hasattr(context, 'temp_dir') and os.path.exists(context.temp_dir):
+        import shutil
+        try:
+            shutil.rmtree(context.temp_dir, ignore_errors=True)
+            logger.info(f"Directorio temporal limpiado: {context.temp_dir}")
+        except Exception as e:
+            logger.error(f"Error al limpiar directorio temporal: {e}")
     
     logger.info("=== SUITE BDD TALENTOLAB FINALIZADA ===")
     log_session_end()
