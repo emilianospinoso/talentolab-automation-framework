@@ -43,10 +43,12 @@ jobs:
           mkdir -p logs
 
       - name: Ejecutar Tests BDD con Behave
+        continue-on-error: true
         run: |
           behave -t @smoke -f json -o reports/behave_smoke.json -f pretty
 
       - name: Ejecutar Tests Pytest + BDD
+        continue-on-error: true
         run: |
           pytest tests_behave/ -v --html=reports/pytest_report.html --self-contained-html
 

@@ -26,9 +26,9 @@ def before_all(context):
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--disable-extensions")
     chrome_options.add_argument("--disable-plugins")
-    chrome_options.add_argument("--disable-images")
-    chrome_options.add_argument("--disable-javascript")
-    chrome_options.add_argument("--disable-css")
+    # NO desactivar JavaScript ni CSS - necesarios para SauceDemo
+    # chrome_options.add_argument("--disable-javascript")
+    # chrome_options.add_argument("--disable-css")
     
     # Directorio de datos único para evitar conflictos
     temp_dir = tempfile.mkdtemp()
@@ -89,6 +89,12 @@ def after_step(context, step):
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
             scenario_name = context.scenario.name.replace(' ', '_').replace('/', '_')
             step_name = step.name.replace(' ', '_').replace('/', '_')
+            
+            # Limpiar caracteres especiales para nombres de archivo
+            import re
+            scenario_name = re.sub(r'[<>:"/\\|?*"]', '_', scenario_name)
+            step_name = re.sub(r'[<>:"/\\|?*"]', '_', step_name)
+            
             filename = f"FAIL_{scenario_name}_{step_name}_{timestamp}.png"
             filepath = SCREEN_DIR / filename
             
