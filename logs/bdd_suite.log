@@ -3273,3 +3273,5 @@
 12:15:37 INFO talentolab_bdd – ============================================================
 12:15:37 INFO talentolab_bdd – FIN DE SESIÓN BDD
 12:15:37 INFO talentolab_bdd – ============================================================
+12:20:31 INFO talentolab_bdd – === INICIANDO SESIÓN PYTEST + BDD ===
+12:20:31 INFO talentolab_bdd – === SESIÓN PYTEST FINALIZADA (exit: 0) ===
