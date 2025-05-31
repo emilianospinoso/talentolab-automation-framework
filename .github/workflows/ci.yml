@@ -1,0 +1,56 @@
+name: CI TalentoLab
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      PYTHON_VERSION: "3.12"
+      PIP_CACHE: ~/.cache/pip
+
+    steps:
+      # 1 · Checkout
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      # 2 · Cache de pip
+      - name: Cache dependencias
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.PIP_CACHE }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+
+      # 3 · Setup Python
+      - name: Instalar Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      # 4 · Instalar dependencias
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 5 · Ejecutar tests UI + API + BDD
+      - name: Run Pytest & Behave
+        run: |
+          pytest tests/ tests_api/ -v --html=reports/pytest_report.html --self-contained-html
+          behave -f json -o reports/behave.json -f pretty
+
+      # 6 · Subir artefactos (reportes + logs)
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report
+          path: reports/
+
+      - name: Upload Suite Log
+        uses: actions/upload-artifact@v4
+        with:
+          name: suite-log
+          path: logs/

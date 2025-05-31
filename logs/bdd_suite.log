@@ -1,0 +1,376 @@
+16:58:19 INFO talentolab_bdd – === INICIANDO SESIÓN PYTEST + BDD ===
+16:58:19 INFO talentolab_bdd – === EJECUTANDO SUITE BDD SMOKE DESDE PYTEST ===
+16:58:19 INFO talentolab_bdd – Salida de Behave:
+16:58:19 INFO talentolab_bdd –   ParserError: Failed to parse "/home/emilianospinoso/Escritorio/talento-lab-ejercicios/Clase14/talentolab_framework/features/cart.feature": 
+16:58:19 INFO talentolab_bdd –   Parser failure in state init, at line 2: "Feature: Carrito de compras"
+16:58:19 INFO talentolab_bdd –   REASON: No feature found.
+16:58:19 INFO talentolab_bdd – === EJECUTANDO SUITE BDD REGRESSION DESDE PYTEST ===
+16:58:19 INFO talentolab_bdd – Salida de Behave Regression:
+16:58:19 INFO talentolab_bdd –   ParserError: Failed to parse "/home/emilianospinoso/Escritorio/talento-lab-ejercicios/Clase14/talentolab_framework/features/cart.feature": 
+16:58:19 INFO talentolab_bdd –   Parser failure in state init, at line 2: "Feature: Carrito de compras"
+16:58:19 INFO talentolab_bdd –   REASON: No feature found.
+16:58:19 WARNING talentolab_bdd – Suite BDD @regression completada con advertencias (código 1)
+16:58:19 INFO talentolab_bdd – === EJECUTANDO SUITE BDD COMPLETA DESDE PYTEST ===
+16:58:19 ERROR talentolab_bdd – Errores en suite completa:
+16:58:19 ERROR talentolab_bdd –   usage: behave [options] [ [DIR|FILE|FILE:LINE] ]+
+16:58:19 ERROR talentolab_bdd –   behave: error: format=html is unknown
+16:58:19 INFO talentolab_bdd – === SESIÓN PYTEST FINALIZADA (exit: 1) ===
+16:59:48 INFO talentolab_bdd – === INICIANDO SESIÓN PYTEST + BDD ===
+16:59:48 INFO talentolab_bdd – === EJECUTANDO SUITE BDD SMOKE DESDE PYTEST ===
+16:59:48 INFO talentolab_bdd – Salida de Behave:
+16:59:48 INFO talentolab_bdd –   ParserError: Failed to parse "/home/emilianospinoso/Escritorio/talento-lab-ejercicios/Clase14/talentolab_framework/features/cart.feature": 
+16:59:48 INFO talentolab_bdd –   Parser failure in state init, at line 2: "Feature: Carrito de compras"
+16:59:48 INFO talentolab_bdd –   REASON: No feature found.
+16:59:48 INFO talentolab_bdd – === EJECUTANDO SUITE BDD REGRESSION DESDE PYTEST ===
+16:59:48 INFO talentolab_bdd – Salida de Behave Regression:
+16:59:48 INFO talentolab_bdd –   ParserError: Failed to parse "/home/emilianospinoso/Escritorio/talento-lab-ejercicios/Clase14/talentolab_framework/features/cart.feature": 
+16:59:48 INFO talentolab_bdd –   Parser failure in state init, at line 2: "Feature: Carrito de compras"
+16:59:48 INFO talentolab_bdd –   REASON: No feature found.
+16:59:48 WARNING talentolab_bdd – Suite BDD @regression completada con advertencias (código 1)
+16:59:48 INFO talentolab_bdd – === EJECUTANDO SUITE BDD COMPLETA DESDE PYTEST ===
+16:59:48 ERROR talentolab_bdd – Errores en suite completa:
+16:59:48 ERROR talentolab_bdd –   usage: behave [options] [ [DIR|FILE|FILE:LINE] ]+
+16:59:48 ERROR talentolab_bdd –   behave: error: format=html is unknown
+16:59:48 INFO talentolab_bdd – === SESIÓN PYTEST FINALIZADA (exit: 1) ===
+17:07:00 INFO talentolab_bdd – ============================================================
+17:07:00 INFO talentolab_bdd – NUEVA SESIÓN BDD - 2025-05-29 17:07:00
+17:07:00 INFO talentolab_bdd – ============================================================
+17:07:00 INFO talentolab_bdd – === INICIANDO SUITE BDD TALENTOLAB ===
+17:07:01 INFO talentolab_bdd – WebDriver configurado para BDD
+17:07:01 INFO talentolab_bdd – 🎬 Iniciando Feature: Carrito de compras
+17:07:01 INFO talentolab_bdd – Tags: ui, regression
+17:07:01 INFO talentolab_bdd – ▶️ Escenario: Agregar un producto al carrito
+17:07:01 INFO talentolab_bdd –    Tags: smoke
+17:07:01 INFO talentolab_bdd –    📋 Given: que estoy logueado en SauceDemo con usuario "standard_user"
+17:07:01 INFO talentolab_bdd – BDD: Realizando login previo con usuario: standard_user
+17:07:01 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:07:02 INFO talentolab_bdd – Realizando login completo para usuario: standard_user
+17:07:02 INFO talentolab_bdd – Completando usuario: standard_user
+17:07:02 INFO talentolab_bdd – Completando contraseña
+17:07:02 INFO talentolab_bdd – Haciendo clic en botón de login
+17:07:02 INFO talentolab_bdd –    ✅ Given: que estoy logueado en SauceDemo con usuario "standard_user"
+17:07:02 INFO talentolab_bdd –    📋 Given: estoy en la página de inventario
+17:07:02 INFO talentolab_bdd – BDD: Verificando que estoy en inventario
+17:07:02 INFO talentolab_bdd – Obteniendo título de la página
+17:07:02 INFO talentolab_bdd – Título obtenido: Products
+17:07:02 INFO talentolab_bdd –    ✅ Given: estoy en la página de inventario
+17:07:02 INFO talentolab_bdd –    📋 Given: que el carrito está vacío
+17:07:02 INFO talentolab_bdd – BDD: Verificando que el carrito está vacío
+17:07:12 INFO talentolab_bdd – Carrito vacío (contador = 0)
+17:07:12 INFO talentolab_bdd –    ✅ Given: que el carrito está vacío
+17:07:12 INFO talentolab_bdd –    📋 When: agrego el producto "Sauce Labs Backpack" al carrito
+17:07:12 INFO talentolab_bdd – BDD: Agregando producto al carrito: Sauce Labs Backpack
+17:07:22 INFO talentolab_bdd – Carrito vacío (contador = 0)
+17:07:22 INFO talentolab_bdd – Buscando y agregando producto: Sauce Labs Backpack
+17:07:22 INFO talentolab_bdd – Producto 'Sauce Labs Backpack' agregado al carrito
+17:07:22 INFO talentolab_bdd –    ✅ When: agrego el producto "Sauce Labs Backpack" al carrito
+17:07:22 INFO talentolab_bdd –    📋 Then: el contador del carrito debería mostrar "1"
+17:07:22 INFO talentolab_bdd – BDD: Verificando contador del carrito: 1
+17:07:22 INFO talentolab_bdd – Contador del carrito: 1
+17:07:22 INFO talentolab_bdd –    ✅ Then: el contador del carrito debería mostrar "1"
+17:07:22 INFO talentolab_bdd –    📋 Then: el botón del producto debería cambiar a "Remove"
+17:07:22 INFO talentolab_bdd – BDD: Verificando que el botón cambió a Remove
+17:07:22 INFO talentolab_bdd –    ✅ Then: el botón del producto debería cambiar a "Remove"
+17:07:22 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Agregar un producto al carrito
+17:07:22 INFO talentolab_bdd –    Duración: 20.83s
+17:07:22 INFO talentolab_bdd – 🎬 Feature completada: Carrito de compras
+17:07:22 INFO talentolab_bdd –    Escenarios: 1 ✅ | 0 ❌
+17:07:22 INFO talentolab_bdd – 🎬 Iniciando Feature: Login en SauceDemo
+17:07:22 INFO talentolab_bdd – Tags: ui, smoke
+17:07:22 INFO talentolab_bdd – ▶️ Escenario: Login exitoso con credenciales válidas
+17:07:22 INFO talentolab_bdd –    Tags: smoke
+17:07:22 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:07:22 INFO talentolab_bdd – BDD: Abriendo página de login
+17:07:22 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:07:22 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:07:22 INFO talentolab_bdd –    📋 When: ingreso el usuario "standard_user" y la contraseña "secret_sauce"
+17:07:22 INFO talentolab_bdd – BDD: Ingresando credenciales - Usuario: standard_user
+17:07:22 INFO talentolab_bdd – Completando usuario: standard_user
+17:07:22 INFO talentolab_bdd – Completando contraseña
+17:07:22 INFO talentolab_bdd –    ✅ When: ingreso el usuario "standard_user" y la contraseña "secret_sauce"
+17:07:22 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:07:22 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:07:22 INFO talentolab_bdd – Haciendo clic en botón de login
+17:07:22 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:07:22 INFO talentolab_bdd –    📋 Then: debería ser redirigido a la página de inventario
+17:07:22 INFO talentolab_bdd – BDD: Verificando redirección a inventario
+17:07:22 INFO talentolab_bdd –    ✅ Then: debería ser redirigido a la página de inventario
+17:07:22 INFO talentolab_bdd –    📋 Then: debería ver el título "Products"
+17:07:22 INFO talentolab_bdd – BDD: Verificando título: Products
+17:07:22 INFO talentolab_bdd – Obteniendo título de la página
+17:07:22 INFO talentolab_bdd – Título obtenido: Products
+17:07:22 INFO talentolab_bdd –    ✅ Then: debería ver el título "Products"
+17:07:22 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login exitoso con credenciales válidas
+17:07:22 INFO talentolab_bdd –    Duración: 0.18s
+17:07:22 INFO talentolab_bdd – ▶️ Escenario: Login fallido con credenciales inválidas -- @1.1 
+17:07:22 INFO talentolab_bdd –    Tags: regression
+17:07:22 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:07:22 INFO talentolab_bdd – BDD: Abriendo página de login
+17:07:22 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:07:22 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:07:22 INFO talentolab_bdd –    📋 When: ingreso el usuario "standard_user" y la contraseña "password_incorrecto"
+17:07:22 INFO talentolab_bdd – BDD: Ingresando credenciales - Usuario: standard_user
+17:07:22 INFO talentolab_bdd – Completando usuario: standard_user
+17:07:22 INFO talentolab_bdd – Completando contraseña
+17:07:22 INFO talentolab_bdd –    ✅ When: ingreso el usuario "standard_user" y la contraseña "password_incorrecto"
+17:07:22 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:07:22 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:07:22 INFO talentolab_bdd – Haciendo clic en botón de login
+17:07:22 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:07:22 INFO talentolab_bdd –    📋 Then: debería ver un mensaje de error
+17:07:22 INFO talentolab_bdd – BDD: Verificando mensaje de error
+17:07:22 WARNING talentolab_bdd – Error de login visible
+17:07:22 INFO talentolab_bdd –    ✅ Then: debería ver un mensaje de error
+17:07:22 INFO talentolab_bdd –    📋 Then: debería permanecer en la página de login
+17:07:22 INFO talentolab_bdd – BDD: Verificando permanencia en login
+17:07:22 INFO talentolab_bdd –    ✅ Then: debería permanecer en la página de login
+17:07:22 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login fallido con credenciales inválidas -- @1.1 
+17:07:22 INFO talentolab_bdd –    Duración: 0.16s
+17:07:22 INFO talentolab_bdd – ▶️ Escenario: Login fallido con credenciales inválidas -- @1.2 
+17:07:22 INFO talentolab_bdd –    Tags: regression
+17:07:22 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:07:22 INFO talentolab_bdd – BDD: Abriendo página de login
+17:07:22 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:07:22 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:07:22 INFO talentolab_bdd –    📋 When: ingreso el usuario "usuario_inexistente" y la contraseña "secret_sauce"
+17:07:22 INFO talentolab_bdd – BDD: Ingresando credenciales - Usuario: usuario_inexistente
+17:07:22 INFO talentolab_bdd – Completando usuario: usuario_inexistente
+17:07:22 INFO talentolab_bdd – Completando contraseña
+17:07:22 INFO talentolab_bdd –    ✅ When: ingreso el usuario "usuario_inexistente" y la contraseña "secret_sauce"
+17:07:22 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:07:22 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:07:22 INFO talentolab_bdd – Haciendo clic en botón de login
+17:07:22 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:07:22 INFO talentolab_bdd –    📋 Then: debería ver un mensaje de error
+17:07:22 INFO talentolab_bdd – BDD: Verificando mensaje de error
+17:07:22 WARNING talentolab_bdd – Error de login visible
+17:07:22 INFO talentolab_bdd –    ✅ Then: debería ver un mensaje de error
+17:07:22 INFO talentolab_bdd –    📋 Then: debería permanecer en la página de login
+17:07:22 INFO talentolab_bdd – BDD: Verificando permanencia en login
+17:07:22 INFO talentolab_bdd –    ✅ Then: debería permanecer en la página de login
+17:07:22 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login fallido con credenciales inválidas -- @1.2 
+17:07:22 INFO talentolab_bdd –    Duración: 0.15s
+17:07:22 INFO talentolab_bdd – ▶️ Escenario: Login fallido con credenciales inválidas -- @1.3 
+17:07:22 INFO talentolab_bdd –    Tags: regression
+17:07:22 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:07:22 INFO talentolab_bdd – BDD: Abriendo página de login
+17:07:22 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:07:22 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:07:22 INFO talentolab_bdd –    📋 When: ingreso el usuario "locked_out_user" y la contraseña "secret_sauce"
+17:07:22 INFO talentolab_bdd – BDD: Ingresando credenciales - Usuario: locked_out_user
+17:07:22 INFO talentolab_bdd – Completando usuario: locked_out_user
+17:07:22 INFO talentolab_bdd – Completando contraseña
+17:07:22 INFO talentolab_bdd –    ✅ When: ingreso el usuario "locked_out_user" y la contraseña "secret_sauce"
+17:07:22 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:07:22 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:07:22 INFO talentolab_bdd – Haciendo clic en botón de login
+17:07:23 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:07:23 INFO talentolab_bdd –    📋 Then: debería ver un mensaje de error
+17:07:23 INFO talentolab_bdd – BDD: Verificando mensaje de error
+17:07:23 WARNING talentolab_bdd – Error de login visible
+17:07:23 INFO talentolab_bdd –    ✅ Then: debería ver un mensaje de error
+17:07:23 INFO talentolab_bdd –    📋 Then: debería permanecer en la página de login
+17:07:23 INFO talentolab_bdd – BDD: Verificando permanencia en login
+17:07:23 INFO talentolab_bdd –    ✅ Then: debería permanecer en la página de login
+17:07:23 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login fallido con credenciales inválidas -- @1.3 
+17:07:23 INFO talentolab_bdd –    Duración: 0.14s
+17:07:23 INFO talentolab_bdd – ▶️ Escenario: Login con campos vacíos
+17:07:23 INFO talentolab_bdd –    Tags: regression
+17:07:23 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:07:23 INFO talentolab_bdd – BDD: Abriendo página de login
+17:07:23 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:07:23 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:07:23 INFO talentolab_bdd –    📋 When: dejo los campos de usuario y contraseña vacíos
+17:07:23 INFO talentolab_bdd – BDD: Dejando campos vacíos
+17:07:23 INFO talentolab_bdd –    ✅ When: dejo los campos de usuario y contraseña vacíos
+17:07:23 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:07:23 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:07:23 INFO talentolab_bdd – Haciendo clic en botón de login
+17:07:23 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:07:23 INFO talentolab_bdd –    📋 Then: debería ver un mensaje de error indicando campos requeridos
+17:07:23 INFO talentolab_bdd – BDD: Verificando error de campos requeridos
+17:07:23 WARNING talentolab_bdd – Error de login visible
+17:07:23 WARNING talentolab_bdd – Error de login visible
+17:07:23 ERROR talentolab_bdd – Mensaje de error: Epic sadface: Username is required
+17:07:23 INFO talentolab_bdd –    ✅ Then: debería ver un mensaje de error indicando campos requeridos
+17:07:23 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login con campos vacíos
+17:07:23 INFO talentolab_bdd –    Duración: 0.08s
+17:07:23 INFO talentolab_bdd – 🎬 Feature completada: Login en SauceDemo
+17:07:23 INFO talentolab_bdd –    Escenarios: 3 ✅ | 0 ❌
+17:07:23 INFO talentolab_bdd – WebDriver cerrado
+17:07:23 INFO talentolab_bdd – === SUITE BDD TALENTOLAB FINALIZADA ===
+17:07:23 INFO talentolab_bdd – ============================================================
+17:07:23 INFO talentolab_bdd – FIN DE SESIÓN BDD
+17:07:23 INFO talentolab_bdd – ============================================================
+17:07:23 INFO talentolab_bdd – === INICIANDO SESIÓN PYTEST + BDD ===
+17:07:23 INFO talentolab_bdd – === SESIÓN PYTEST FINALIZADA (exit: 4) ===
+17:09:51 INFO talentolab_bdd – ============================================================
+17:09:51 INFO talentolab_bdd – NUEVA SESIÓN BDD - 2025-05-29 17:09:51
+17:09:51 INFO talentolab_bdd – ============================================================
+17:09:51 INFO talentolab_bdd – === INICIANDO SUITE BDD TALENTOLAB ===
+17:09:52 INFO talentolab_bdd – WebDriver configurado para BDD
+17:09:52 INFO talentolab_bdd – 🎬 Iniciando Feature: Carrito de compras
+17:09:52 INFO talentolab_bdd – Tags: ui, regression
+17:09:52 INFO talentolab_bdd – ▶️ Escenario: Agregar un producto al carrito
+17:09:52 INFO talentolab_bdd –    Tags: smoke
+17:09:52 INFO talentolab_bdd –    📋 Given: que estoy logueado en SauceDemo con usuario "standard_user"
+17:09:52 INFO talentolab_bdd – BDD: Realizando login previo con usuario: standard_user
+17:09:52 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:09:52 INFO talentolab_bdd – Realizando login completo para usuario: standard_user
+17:09:52 INFO talentolab_bdd – Completando usuario: standard_user
+17:09:52 INFO talentolab_bdd – Completando contraseña
+17:09:52 INFO talentolab_bdd – Haciendo clic en botón de login
+17:09:53 INFO talentolab_bdd –    ✅ Given: que estoy logueado en SauceDemo con usuario "standard_user"
+17:09:53 INFO talentolab_bdd –    📋 Given: estoy en la página de inventario
+17:09:53 INFO talentolab_bdd – BDD: Verificando que estoy en inventario
+17:09:53 INFO talentolab_bdd – Obteniendo título de la página
+17:09:53 INFO talentolab_bdd – Título obtenido: Products
+17:09:53 INFO talentolab_bdd –    ✅ Given: estoy en la página de inventario
+17:09:53 INFO talentolab_bdd –    📋 Given: que el carrito está vacío
+17:09:53 INFO talentolab_bdd – BDD: Verificando que el carrito está vacío
+17:10:03 INFO talentolab_bdd – Carrito vacío (contador = 0)
+17:10:03 INFO talentolab_bdd –    ✅ Given: que el carrito está vacío
+17:10:03 INFO talentolab_bdd –    📋 When: agrego el producto "Sauce Labs Backpack" al carrito
+17:10:03 INFO talentolab_bdd – BDD: Agregando producto al carrito: Sauce Labs Backpack
+17:10:13 INFO talentolab_bdd – Carrito vacío (contador = 0)
+17:10:13 INFO talentolab_bdd – Buscando y agregando producto: Sauce Labs Backpack
+17:10:13 INFO talentolab_bdd – Producto 'Sauce Labs Backpack' agregado al carrito
+17:10:13 INFO talentolab_bdd –    ✅ When: agrego el producto "Sauce Labs Backpack" al carrito
+17:10:13 INFO talentolab_bdd –    📋 Then: el contador del carrito debería mostrar "1"
+17:10:13 INFO talentolab_bdd – BDD: Verificando contador del carrito: 1
+17:10:13 INFO talentolab_bdd – Contador del carrito: 1
+17:10:13 INFO talentolab_bdd –    ✅ Then: el contador del carrito debería mostrar "1"
+17:10:13 INFO talentolab_bdd –    📋 Then: el botón del producto debería cambiar a "Remove"
+17:10:13 INFO talentolab_bdd – BDD: Verificando que el botón cambió a Remove
+17:10:13 INFO talentolab_bdd –    ✅ Then: el botón del producto debería cambiar a "Remove"
+17:10:13 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Agregar un producto al carrito
+17:10:13 INFO talentolab_bdd –    Duración: 20.85s
+17:10:13 INFO talentolab_bdd – 🎬 Feature completada: Carrito de compras
+17:10:13 INFO talentolab_bdd –    Escenarios: 1 ✅ | 0 ❌
+17:10:13 INFO talentolab_bdd – 🎬 Iniciando Feature: Login en SauceDemo
+17:10:13 INFO talentolab_bdd – Tags: ui, smoke
+17:10:13 INFO talentolab_bdd – ▶️ Escenario: Login exitoso con credenciales válidas
+17:10:13 INFO talentolab_bdd –    Tags: smoke
+17:10:13 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd – BDD: Abriendo página de login
+17:10:13 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:10:13 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd –    📋 When: ingreso el usuario "standard_user" y la contraseña "secret_sauce"
+17:10:13 INFO talentolab_bdd – BDD: Ingresando credenciales - Usuario: standard_user
+17:10:13 INFO talentolab_bdd – Completando usuario: standard_user
+17:10:13 INFO talentolab_bdd – Completando contraseña
+17:10:13 INFO talentolab_bdd –    ✅ When: ingreso el usuario "standard_user" y la contraseña "secret_sauce"
+17:10:13 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd – Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd –    📋 Then: debería ser redirigido a la página de inventario
+17:10:13 INFO talentolab_bdd – BDD: Verificando redirección a inventario
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería ser redirigido a la página de inventario
+17:10:13 INFO talentolab_bdd –    📋 Then: debería ver el título "Products"
+17:10:13 INFO talentolab_bdd – BDD: Verificando título: Products
+17:10:13 INFO talentolab_bdd – Obteniendo título de la página
+17:10:13 INFO talentolab_bdd – Título obtenido: Products
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería ver el título "Products"
+17:10:13 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login exitoso con credenciales válidas
+17:10:13 INFO talentolab_bdd –    Duración: 0.17s
+17:10:13 INFO talentolab_bdd – ▶️ Escenario: Login fallido con credenciales inválidas -- @1.1 
+17:10:13 INFO talentolab_bdd –    Tags: regression
+17:10:13 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd – BDD: Abriendo página de login
+17:10:13 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:10:13 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd –    📋 When: ingreso el usuario "standard_user" y la contraseña "password_incorrecto"
+17:10:13 INFO talentolab_bdd – BDD: Ingresando credenciales - Usuario: standard_user
+17:10:13 INFO talentolab_bdd – Completando usuario: standard_user
+17:10:13 INFO talentolab_bdd – Completando contraseña
+17:10:13 INFO talentolab_bdd –    ✅ When: ingreso el usuario "standard_user" y la contraseña "password_incorrecto"
+17:10:13 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd – Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd –    📋 Then: debería ver un mensaje de error
+17:10:13 INFO talentolab_bdd – BDD: Verificando mensaje de error
+17:10:13 WARNING talentolab_bdd – Error de login visible
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería ver un mensaje de error
+17:10:13 INFO talentolab_bdd –    📋 Then: debería permanecer en la página de login
+17:10:13 INFO talentolab_bdd – BDD: Verificando permanencia en login
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería permanecer en la página de login
+17:10:13 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login fallido con credenciales inválidas -- @1.1 
+17:10:13 INFO talentolab_bdd –    Duración: 0.16s
+17:10:13 INFO talentolab_bdd – ▶️ Escenario: Login fallido con credenciales inválidas -- @1.2 
+17:10:13 INFO talentolab_bdd –    Tags: regression
+17:10:13 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd – BDD: Abriendo página de login
+17:10:13 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:10:13 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd –    📋 When: ingreso el usuario "usuario_inexistente" y la contraseña "secret_sauce"
+17:10:13 INFO talentolab_bdd – BDD: Ingresando credenciales - Usuario: usuario_inexistente
+17:10:13 INFO talentolab_bdd – Completando usuario: usuario_inexistente
+17:10:13 INFO talentolab_bdd – Completando contraseña
+17:10:13 INFO talentolab_bdd –    ✅ When: ingreso el usuario "usuario_inexistente" y la contraseña "secret_sauce"
+17:10:13 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd – Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd –    📋 Then: debería ver un mensaje de error
+17:10:13 INFO talentolab_bdd – BDD: Verificando mensaje de error
+17:10:13 WARNING talentolab_bdd – Error de login visible
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería ver un mensaje de error
+17:10:13 INFO talentolab_bdd –    📋 Then: debería permanecer en la página de login
+17:10:13 INFO talentolab_bdd – BDD: Verificando permanencia en login
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería permanecer en la página de login
+17:10:13 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login fallido con credenciales inválidas -- @1.2 
+17:10:13 INFO talentolab_bdd –    Duración: 0.15s
+17:10:13 INFO talentolab_bdd – ▶️ Escenario: Login fallido con credenciales inválidas -- @1.3 
+17:10:13 INFO talentolab_bdd –    Tags: regression
+17:10:13 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd – BDD: Abriendo página de login
+17:10:13 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:10:13 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd –    📋 When: ingreso el usuario "locked_out_user" y la contraseña "secret_sauce"
+17:10:13 INFO talentolab_bdd – BDD: Ingresando credenciales - Usuario: locked_out_user
+17:10:13 INFO talentolab_bdd – Completando usuario: locked_out_user
+17:10:13 INFO talentolab_bdd – Completando contraseña
+17:10:13 INFO talentolab_bdd –    ✅ When: ingreso el usuario "locked_out_user" y la contraseña "secret_sauce"
+17:10:13 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd – Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd –    📋 Then: debería ver un mensaje de error
+17:10:13 INFO talentolab_bdd – BDD: Verificando mensaje de error
+17:10:13 WARNING talentolab_bdd – Error de login visible
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería ver un mensaje de error
+17:10:13 INFO talentolab_bdd –    📋 Then: debería permanecer en la página de login
+17:10:13 INFO talentolab_bdd – BDD: Verificando permanencia en login
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería permanecer en la página de login
+17:10:13 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login fallido con credenciales inválidas -- @1.3 
+17:10:13 INFO talentolab_bdd –    Duración: 0.14s
+17:10:13 INFO talentolab_bdd – ▶️ Escenario: Login con campos vacíos
+17:10:13 INFO talentolab_bdd –    Tags: regression
+17:10:13 INFO talentolab_bdd –    📋 Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd – BDD: Abriendo página de login
+17:10:13 INFO talentolab_bdd – Navegando a https://www.saucedemo.com/
+17:10:13 INFO talentolab_bdd –    ✅ Given: que abro la página de login de SauceDemo
+17:10:13 INFO talentolab_bdd –    📋 When: dejo los campos de usuario y contraseña vacíos
+17:10:13 INFO talentolab_bdd – BDD: Dejando campos vacíos
+17:10:13 INFO talentolab_bdd –    ✅ When: dejo los campos de usuario y contraseña vacíos
+17:10:13 INFO talentolab_bdd –    📋 When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd – BDD: Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd – Haciendo clic en botón de login
+17:10:13 INFO talentolab_bdd –    ✅ When: hago clic en el botón de login
+17:10:13 INFO talentolab_bdd –    📋 Then: debería ver un mensaje de error indicando campos requeridos
+17:10:13 INFO talentolab_bdd – BDD: Verificando error de campos requeridos
+17:10:13 WARNING talentolab_bdd – Error de login visible
+17:10:13 WARNING talentolab_bdd – Error de login visible
+17:10:13 ERROR talentolab_bdd – Mensaje de error: Epic sadface: Username is required
+17:10:13 INFO talentolab_bdd –    ✅ Then: debería ver un mensaje de error indicando campos requeridos
+17:10:13 INFO talentolab_bdd – ✅ ESCENARIO EXITOSO: Login con campos vacíos
+17:10:13 INFO talentolab_bdd –    Duración: 0.08s
+17:10:13 INFO talentolab_bdd – 🎬 Feature completada: Login en SauceDemo
+17:10:13 INFO talentolab_bdd –    Escenarios: 3 ✅ | 0 ❌
+17:10:13 INFO talentolab_bdd – WebDriver cerrado
+17:10:13 INFO talentolab_bdd – === SUITE BDD TALENTOLAB FINALIZADA ===
+17:10:13 INFO talentolab_bdd – ============================================================
+17:10:13 INFO talentolab_bdd – FIN DE SESIÓN BDD
+17:10:13 INFO talentolab_bdd – ============================================================

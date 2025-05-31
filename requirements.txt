@@ -1,0 +1,19 @@
+# Framework Testing
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-check==2.2.2
+
+# BDD con Behave - version actualizada
+behave==1.2.6
+
+# Web Testing
+selenium==4.15.2
+
+# API Testing  
+requests==2.31.0
+
+# Datos de prueba
+faker==20.1.0
+
+# Utilidades
+pathlib2==2.3.7
